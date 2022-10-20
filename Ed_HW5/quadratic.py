@@ -5,13 +5,17 @@ class Quadtraic:
 
     def __init__(self, a: float, b: float, c: float):
         if a == 0:
-            raise Exception("A cannot be equal to zero.")
-        if type(a) != int or type(b) != int or type(c) != int:
-            raise TypeError(a, b, c)
-        self.a = a
-        self.b = b
-        self.c = c
+            raise Exception("First coefficient cannot be equal to zero.")
+        try:
+
+            self.a = float(a)
+            self.b = float(b)
+            self.c = float(c)
+        except ValueError:
+            raise Exception("Coefficients must be real numbers")
+
         self.d = (b**2) - (4 * a * c)
+        
         try:
             self.sol1 = (-b - sqrt(self.d)) / (2 * a)
         except ValueError:
