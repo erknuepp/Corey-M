@@ -11,3 +11,9 @@ class Cylinder:
 
     def calculate_surface_area(self):
         return 2 * Cylinder.pi * self.radius * (self.radius + self.height)
+
+    def set_height(self, height):
+        self.height = height
+
+    def __str__(self):
+        f'Cylinder(radius={self.radius}, height={self.height})'

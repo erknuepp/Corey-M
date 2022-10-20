@@ -20,7 +20,6 @@ class Quadtraic:
             self.sol2 = (-b + sqrt(self.d)) / (2 * a)
         except ValueError:
             raise Exception("Not real root")
-        
 
     def __repr__(self):
         f'Quadtraic(a={self.a}, b={self.b}, c={self.c})'
